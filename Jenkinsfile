@@ -11,7 +11,7 @@ node {
     }
 
     stage('Build') {
-        sh "${GRADLE_HOME}/bin/gradle build"
+        sh "${GRADLE_HOME}/bin/gradle build --scan"
         sh "ls -la build/libs/*.war"
         sh "echo ====================="
         sh "cp build/libs/*.war docker/webapp.war"
