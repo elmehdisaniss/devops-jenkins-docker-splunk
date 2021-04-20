@@ -5,6 +5,12 @@ node {
     def GRADLE_HOME = tool name: 'gradle-4.10.2', type: 'hudson.plugins.gradle.GradleInstallation'
     def REPO_URL = 'https://github.com/elmehdisaniss/devops-jenkins-docker-splunk.git'
     def DOCKERHUB_REPO = 'cloudacademydevops/webapp'
+    
+
+plugins {
+  id "com.gradle.build-scan" version "1.16"
+}
+
 
     stage('Clone') {        
         git url: REPO_URL
