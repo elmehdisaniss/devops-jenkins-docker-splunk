@@ -7,11 +7,6 @@ node {
     def DOCKERHUB_REPO = 'cloudacademydevops/webapp'
     
 
-plugins {
-  id "com.gradle.build-scan" version "1.16"
-}
-
-
     stage('Clone') {        
         git url: REPO_URL
     }
